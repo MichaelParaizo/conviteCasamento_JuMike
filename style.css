@@ -1,0 +1,537 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative; 
+  overflow: hidden; 
+  margin-bottom: 0; /* Remove espaço extra abaixo do header */
+  padding-bottom: 0;
+}
+
+@font-face {
+  font-family: 'FleurDeLeah-Regular';
+  src: url('Italianno-Regular.ttf') format('truetype');
+}
+
+
+header h1 {
+  font-family: 'FleurDeLeah-Regular', cursive;
+  font-size: 5rem; /* Ajuste o tamanho conforme necessário */
+  text-align: center;
+  color: #fff; /* Ajuste a cor conforme sua preferência */
+}
+
+header p {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+section h2 {
+  font-size: 2.0rem; /* Aumenta o tamanho dos títulos */
+  font-weight: bold;
+  text-align: center;
+}
+
+section p {
+  font-size: 1.2rem; /* Aumenta o tamanho dos parágrafos */
+  text-align: center;
+}
+
+
+
+img {
+  border-radius: 25px; 
+}
+
+.heart {
+  position: absolute;
+  font-size: 2rem;
+  color: #e44d26;
+  animation: floatHeart 4s linear infinite;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80vh) translateX(var(--random-x));
+    opacity: 0;
+  }
+}
+
+#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('URL_DA_SUA_FOTO_HERO') no-repeat center center/cover; 
+  color: #360404;
+  text-align: center;
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+  margin-top: -5px; /* Ajusta para subir a seção mais perto do header */
+  padding-top: 40px; /* Garante um pequeno espaçamento para não colar totalmente */
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 20px;
+  position: relative; 
+  z-index: 2;
+}
+
+.bg-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bg-animation .layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+}
+
+.bg-animation .layer1 {
+  background-image: url('URL_DA_SUA_FOTO_1'); 
+  animation: pan 60s linear infinite;
+}
+
+.bg-animation .layer2 {
+  background-image: url('URL_DA_SUA_FOTO_2'); 
+  animation: pan 40s linear reverse infinite;
+  opacity: 0.5;
+}
+
+@keyframes pan {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e44d26;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease; 
+}
+
+.cta-button:hover {
+  background-color: #c63d1c; 
+}
+
+
+
+/* Estilização para a Section Cerimônia */
+section#cerimonia {
+  position: relative;
+  background: url('fundoCasamento.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll;
+
+}
+
+section#cerimonia::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6); /* Fundo branco semi-transparente */
+}
+
+/* Estilização para a Section Hero */
+section#hero {
+  position: relative;
+  background: url('fundoCasamento.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll;
+
+}
+
+section#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); /* Fundo branco semi-transparente */
+}
+
+/* Ajuste no conteúdo para que fique acima da sobreposição */
+section#cerimonia .container,
+section#hero .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+#cerimonia {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+section#cerimonia {
+  position: relative;
+  background: url('noivos.png') no-repeat center center;
+  background-size: cover;
+  padding: 50px 0;
+}
+
+section#cerimonia::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6); /* Deixa o fundo mais suave */
+  z-index: 0;
+}
+
+section#cerimonia .container {
+  position: relative;
+  z-index: 1;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+  flex-wrap: wrap; 
+}
+
+.details {
+  background-color: #f0f0f0; /* Substitua por qualquer cor desejada */
+  padding: 20px; /* Adiciona um espaço interno para não ficar colado */
+  background: linear-gradient(to right, #fff0f5, #ffc0cb);
+
+}
+
+.countdown{
+  background-color: #f0f0f0; /* Substitua por qualquer cor desejada */
+  padding: 20px; /* Adiciona um espaço interno para não ficar colado */
+  background: linear-gradient(to right, #fff0f5, #ffc0cb);
+
+}
+
+#rsvp-form {
+  background-color: #f9f9f9; /* Cor de fundo (pode trocar) */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  max-width: 400px; /* Largura máxima */
+  margin: auto; /* Centralizar */
+  background: linear-gradient(to right, #f0f8ff, #b0e0e6);
+}
+
+.details,
+.countdown {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.details h3,
+.countdown h3 {
+  color: #e44d26; 
+  margin-bottom: 15px;
+}
+
+.details p {
+  line-height: 1.8;
+  color: #555;
+}
+
+#countdown-timer {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#countdown-timer span {
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+#presentes {
+  background-color: #f9f9f9;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.lista img {
+  border-radius: 20px; 
+}
+
+.lista {
+  display: flex;
+  flex-direction: column; /* Alinha os itens em coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  gap: 15px; /* Espaçamento entre a imagem e o botão */
+}
+
+.lista a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.lista a:hover {
+  background-color: #555;
+}
+
+#confirmacao {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+#rsvp-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+#rsvp-form label {
+  display: block;
+  margin-top: 10px;
+  color: #333;
+}
+
+#rsvp-form input[type="text"],
+#rsvp-form input[type="email"],
+#rsvp-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+#rsvp-form button {
+  background-color: #5cb85c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#rsvp-form button:hover {
+  background-color: #449d44;
+}
+
+#presentes {
+  background-image: url('fundoCasamento.png'); /* Substitua pelo caminho correto da sua imagem */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 50px 20px;
+}
+
+#presentes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); /* Ajuste a transparência conforme desejar */
+  z-index: 1;
+}
+
+#presentes h2, 
+#presentes p, 
+#presentes .lista {
+  position: relative;
+  z-index: 2;
+}
+
+
+#confirmacao {
+  background-image: url('fundoPresente.png'); /* Substitua pelo caminho correto da sua imagem */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 50px 20px;
+}
+
+#confirmacao::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4); /* Ajuste a transparência conforme desejar */
+  z-index: 1;
+}
+
+#confirmacao h2, 
+#confirmacao form {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content img {
+  transition: transform 0.5s ease-in-out;
+  animation: float 3s infinite alternate ease-in-out;
+  will-change: transform;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+@keyframes moveSide {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+.hero-content img {
+  animation: float 3s infinite alternate ease-in-out, moveSide 5s infinite ease-in-out;
+}
+
+.hero-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Animação para fazer a imagem flutuar */
+.hero-content img {
+  transition: transform 0.5s ease-in-out;
+  animation: float 3s infinite alternate ease-in-out;
+  will-change: transform;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-10px) scale(1);
+  }
+}
+
+/* Aumentar a imagem no hover */
+.hero-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos para o contador */
+#countdown-timer {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .details,
+  .countdown {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  #countdown-timer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 3rem; /* Reduz o tamanho do título */
+  }
+  
+  section h2 {
+    font-size: 1.5rem; /* Ajusta o tamanho dos subtítulos */
+  }
+
+  section p {
+    font-size: 1rem; /* Reduz o tamanho do texto */
+  }
+}

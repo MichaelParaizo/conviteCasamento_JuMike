@@ -1,0 +1,95 @@
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juliana & Michael - Nosso Casamento</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fleur+de+Leah&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Juliana & Michael</h1>
+    <p>Juntos para sempre, celebrando o amor!</p>
+  </header>
+
+  <section id="hero">
+    <div class="bg-animation">
+      <div class="layer layer1"></div>
+      <div class="layer layer2"></div>
+    </div>
+    <div class="hero-content">
+      <h2>Estamos Casando!</h2>
+      <p>Temos o prazer de convidar você para celebrar nosso casamento.</p>
+      <!-- Use a tag <img> para sua foto do hero -->
+      <img src="fotoPrincipal2.png" alt="Juliana e Michael" style="width:80%; height:auto;">
+      <a href="#confirmacao" class="cta-button">Confirme sua Presença</a>
+    </div>
+  </section>
+
+  <section id="cerimonia">
+    <h2>Cerimônia</h2>
+    <div class="container">
+      <div class="details">
+        <h3>Data e Hora</h3>
+        <p>15 de Novembro de 2025 às 17:00</p>
+        <h3>Local</h3>
+        <p>Na Preparação de Deus</p>
+        <h3>Recepção</h3>
+        <p>Salão de Festas Requinte</p>
+        <!-- Use a tag <img> para foto do local -->
+       <img src="casamento.png" alt="Local da Cerimônia" style="max-width:100%; height:auto;">
+        <a href="#" class="map-button">Ver no Mapa</a>
+      </div>
+      <div class="countdown">
+        <h3>Faltam:</h3>
+        <div id="countdown-timer">
+          <span>00</span> Dias
+          <span>00</span> Horas
+          <span>00</span> Minutos
+          <span>00</span> Segundos
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="presentes">
+    <h2>Lista de Presentes</h2>
+    <p>Sua presença é o maior presente! Mas, se desejar, veja nossa lista:</p>
+    <div class="lista">
+      <!-- Use a tag <img> para foto dos presentes -->
+    <img src="presentes.png" alt="Lista de Presentes" style="max-width:50%; height:auto;">
+      <a href="#" target="_blank">Lista de Presentes Online</a>
+    </div>
+  </section>
+
+  <section id="confirmacao">
+    <h2>Confirme sua Presença</h2>
+    <form id="rsvp-form">
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="presenca">Confirmar Presença:</label>
+      <select id="presenca" name="presenca">
+        <option value="sim">Sim, estarei presente!</option>
+        <option value="nao">Não poderei comparecer.</option>
+      </select>
+
+      <button type="submit">Enviar Confirmação</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Juliana & Michael. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+
+</html>
